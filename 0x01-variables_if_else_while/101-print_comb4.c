@@ -11,38 +11,37 @@
 
 int main(void)
 {
-	int start = 48;
-	int end = 57;
-	int i = 48;
-	int j = 49;
-	int k = 50;
+	int i, j, k;
 
-	while (i <= end)
+	i = 48;
+	j = 48;
+	k = 48;
+
+	while (i < 58)
 	{
-		while (j <= end)
+		j = 48;
+		while (j < 58)
 		{
-			while (k <= end)
+			k = 48;
+			while (k < 58)
 			{
-				if (i != j && j != k && i != k)
+				if (i != j && i != k && j != k && i < j && j < k)
 				{
 					putchar(i);
 					putchar(j);
-					putchar(k);
-					if (i != 56 || j != 57 || k != 57)
+					putchar(g);
+					if (i == 55 && j == 56 && k == 57)
 					{
-						putchar(',');
-						putchar(' ');
+						break;
 					}
+					putchar(',');
+					putchar(' ');
 				}
 				k++;
 			}
 			j++;
-			k = j + 1;
 		}
 		i++;
-		start++;
-		j = start + 1;
-		k = i + 1;
 	}
 	putchar('\n');
 	return (0);
