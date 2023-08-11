@@ -5,10 +5,10 @@
 /**
  * main - Entry point
  *
- * Description : C program that specifies whether a number is positive,
+ * Description: C program that specifies whether a number is positive,
  *		negative, or a zero
  *
- * Return : 0 always (correct)
+ * Return: 0 (success)
  */
 
 int main(void)
