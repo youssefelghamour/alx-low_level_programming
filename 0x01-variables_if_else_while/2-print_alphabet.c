@@ -13,9 +13,10 @@ int main(void)
 	int start = 97;
 	int end = 122;
 
-	for (int i = start; i <= end; i++)
+	while (start < end + 1)
 	{
-		putchar(i);
+		putchar(start);
+		i++;
 	}
 	return (0);
 }
