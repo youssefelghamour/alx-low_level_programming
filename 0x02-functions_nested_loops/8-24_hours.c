@@ -8,19 +8,19 @@ void jack_bauer(void)
 {
 	int a, b, c, d;
 
-	for (a = 0; a <= 2; a++)
+	for (a = 48; a <= 50; a++)
 	{
-		for (b = 0; b <= 3; b++)
+		for (b = 48; b <= 51; b++)
 		{
-			for (c = 0; c <= 5; c++)
+			for (c = 48; c <= 53; c++)
 			{
-				for (d = 0; d <= 9; d++)
+				for (d = 48; d <= 57; d++)
 				{
-					_putchar(a + '0');
-					_putchar(b + '0');
+					_putchar(a);
+					_putchar(b);
 					_putchar(':');
-					_putchar(c + '0');
-					_putchar(d + '0');
+					_putchar(c);
+					_putchar(d);
 					_putchar('\n');
 				}
 			}
