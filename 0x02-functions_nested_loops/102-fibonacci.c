@@ -9,8 +9,8 @@
 int main(void)
 {
 	int i;
-	long long int j, k;
-	long long int numb[i];
+	long int j, k;
+	long int numb[i];
 
 	numb[0] = 0;
 	numb[1] = 1;
@@ -24,7 +24,7 @@ int main(void)
 		{
 			printf(", ");
 		}
-		printf("%lld", numb[i]);
+		printf("%ld", numb[i]);
 	}
 
 	printf("\n");
