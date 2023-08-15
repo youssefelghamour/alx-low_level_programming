@@ -16,7 +16,8 @@ int main(void)
 
 	a = 1;
 	b = 2;
-	c = s = 0;
+	c = 0;
+	s = 2;
 	for (i = 0; i < 48; i++)
 	{
 		while (c < 4000000)
