@@ -10,19 +10,19 @@
 
 char *rot13(char *s)
 {
-	int i = 0;
+	int j, i = 0;
 
 	while (s[i] != '\0')
 	{
-		while (!((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z')))
-			i++;
-
-		if ((s[i] >= 'a' && s[i] <= 'm') || (s[i] >= 'A' && s[i] <= 'M'))
-			 s[i] = s[i] + 13;
-		else
-			 s[i] = s[i] - 13;
-
-		 i++;
+		for (j = 0; j < 52; j++)
+		{
+			if (s[i] == alpha[j])
+			{
+				s[i] = rot[j];
+				break;
+			}
+		}
+		i++;
 	}
 
 	return (s);
