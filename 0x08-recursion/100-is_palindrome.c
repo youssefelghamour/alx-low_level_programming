@@ -1,7 +1,22 @@
 #include "main.h"
 
 int is_palindrome_recursive(char *s, int start, int end);
-int _strlen_recursion(char *s);
+
+/**
+ * _strlen_recursion - returns the length of a string
+ *
+ * @s: string input
+ *
+ * Return: the length of string
+ */
+
+int _strlen_recursion(char *s)
+{
+	if (*s != '\0')
+		return (1 + _strlen_recursion(s + 1));
+	else
+		return (0);
+}
 
 /**
  * is_palindrome - detects if a string is a palindrome
