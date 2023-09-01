@@ -15,11 +15,9 @@ int main(int argc, char *argv[])
 	int count;
 	int mul = 1;
 
-	if (argc > 1)
+	if (argc == 3)
 	{
-		for (count = 1; count < argc; count++)
-			mul *= atoi(argv[count]);
-		printf("%d\n", mul);
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	}
 	else
 	{
