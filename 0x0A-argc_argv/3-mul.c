@@ -13,7 +13,6 @@
 int main(int argc, char *argv[])
 {
 	int count;
-	int mul = 1;
 
 	if (argc == 3)
 	{
