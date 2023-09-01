@@ -4,7 +4,7 @@
  * main - prints its name, followed by a new line
  *
  * @argc: number of command line arguments
- * @argv: array that containing the command line arguments
+ * @argv: array containing the command line arguments
  *
  * Return: 0
  */
