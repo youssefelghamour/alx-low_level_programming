@@ -1,5 +1,26 @@
 #include "main.h"
 #include <string.h>
+
+/**
+ * space - checks if a string contains only spaces
+ * @str: input string
+ * Return: 1 if string contains only spaces, 0 otherwise
+ */
+int space(char *str)
+{
+	int i, j;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == ' ')
+			;
+		else
+			return (0);
+	}
+
+	return (1);
+}
+
 /**
  * strtow - splits a string into words
  * @str: input string
@@ -11,7 +32,7 @@ char **strtow(char *str)
 	char **p;
 	int l = strlen(str);
 
-	if (str[0] == '\0' || str == NULL || (l == 1 && str[0] == ' '))
+	if (str[0] == '\0' || str == NULL || space(str))
 		return (NULL);
 
 	p = malloc((l + 1) * sizeof(char *));
