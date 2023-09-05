@@ -36,7 +36,7 @@ char **strtow(char *str)
 
 	while (str[l] != '\0')
 		l++;
-	p = malloc((l + 1) * sizeof(char *));
+	p = malloc((l) * sizeof(char *));
 
 	if (p == NULL)
 		return (NULL);
