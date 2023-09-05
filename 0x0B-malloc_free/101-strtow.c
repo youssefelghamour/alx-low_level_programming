@@ -49,7 +49,6 @@ char **strtow(char *str)
 			while (str[i + word_length] != ' '
 					&& str[i + word_length] != '\0')
 				word_length++;
-
 			p[pos] = malloc((word_length + 1) * sizeof(char));
 
 			if (p[pos] == NULL)
@@ -60,16 +59,13 @@ char **strtow(char *str)
 				free(p);
 				return (NULL);
 			}
-
 			for (j = 0; j < word_length; j++)
 				p[pos][j] = str[i + j];
-
 			p[pos][j] = '\0';
 			pos++;
 			i += word_length;
 		}
 	}
 	p[pos] = '\0';
-
 	return (p);
 }
