@@ -28,13 +28,14 @@ int space(char *str)
  */
 char **strtow(char *str)
 {
-	int i = 0, j = 0, k, pos = 0;
+	int i = 0, j = 0, k, l = 0, pos = 0;
 	char **p;
-	int l = strlen(str);
 
 	if (str[0] == '\0' || str == NULL || space(str))
 		return (NULL);
 
+	while (str[l] != '\0')
+		l++;
 	p = malloc((l + 1) * sizeof(char *));
 
 	if (p == NULL)
@@ -50,7 +51,6 @@ char **strtow(char *str)
 					&& str[i + word_length] != '\0')
 				word_length++;
 			p[pos] = malloc((word_length + 1) * sizeof(char));
-
 			if (p[pos] == NULL)
 			{
 				for (k = 0; k < pos; k++)
