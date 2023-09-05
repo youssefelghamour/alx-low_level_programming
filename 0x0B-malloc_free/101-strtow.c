@@ -11,7 +11,7 @@ char **strtow(char *str)
 	char **p;
 	int l = strlen(str);
 
-	if (str[0] == '\0' || str == NULL || str[0] == ' ')
+	if (str[0] == '\0' || str == NULL || (l == 1 && str[0] == ' '))
 		return (NULL);
 
 	p = malloc((l + 1) * sizeof(char *));
