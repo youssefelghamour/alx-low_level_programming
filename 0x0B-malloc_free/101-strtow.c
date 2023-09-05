@@ -56,6 +56,7 @@ char **strtow(char *str)
 			{
 				for (k = 0; k < pos; k++)
 					free(p[k]);
+				free(p[pos]);
 				free(p);
 				return (NULL);
 			}
