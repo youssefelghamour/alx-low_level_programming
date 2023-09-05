@@ -66,6 +66,6 @@ char **strtow(char *str)
 			i += word_length;
 		}
 	}
-	p[pos] = '\0';
+	p[pos] = NULL;
 	return (p);
 }
