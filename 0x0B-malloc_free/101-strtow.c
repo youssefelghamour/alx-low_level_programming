@@ -33,14 +33,14 @@ char **strtow(char *str)
 
 	if (str[0] == '\0' || str == NULL || space(str))
 		return (NULL);
-
 	while (str[l] != '\0')
 		l++;
 	p = malloc((l + 1) * sizeof(char *));
-
-	if (p == NULL)
+	if (p == NULL || l == 0)
+	{
+		free(p);
 		return (NULL);
-
+	}
 	for (i = 0; i < l; i++)
 	{
 		if (str[i] != ' ')
