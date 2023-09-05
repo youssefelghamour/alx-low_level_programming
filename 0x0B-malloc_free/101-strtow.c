@@ -28,7 +28,7 @@ int space(char *str)
  */
 char **strtow(char *str)
 {
-	int i = 0, j = 0, pos = 0;
+	int i = 0, j = 0, k, pos = 0;
 	char **p;
 	int l = strlen(str);
 
@@ -53,7 +53,12 @@ char **strtow(char *str)
 			p[pos] = malloc((word_length + 1) * sizeof(char));
 
 			if (p[pos] == NULL)
+			{
+				for (k = 0; k < pos; k++)
+					free(p[k]);
+				free(p);
 				return (NULL);
+			}
 
 			for (j = 0; j < word_length; j++)
 				p[pos][j] = str[i + j];
