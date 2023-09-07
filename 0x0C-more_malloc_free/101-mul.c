@@ -69,7 +69,10 @@ void _puts(char *str)
 int main(int argc, char *argv[])
 {
 	if (argc == 3)
+	{
 		print_number(_atoi(argv[1]) * _atoi(argv[2]));
+		_putchar('\n');
+	}
 	else
 	{
 		_puts("Error\n");
