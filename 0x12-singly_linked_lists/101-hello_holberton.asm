@@ -1,19 +1,15 @@
-cpp
-section .data
-    message db "Hello, Holberton", 0
+	SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-section .text
-    global _start
+	SECTION .text
+	extern printf
+	global main
+main:
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-_start:
-    ; write message to stdout
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message
-    mov edx, 16
-    int 0x80
-
-    ; exit program
-    mov eax, 1
-    xor ebx, ebx
-    int 0x80
+	mov eax, 0
+	ret
