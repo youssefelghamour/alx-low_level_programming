@@ -1,7 +1,10 @@
-#include "main.h"
-#include <elf.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <elf.h>
 
 /**
 * print_error - Prints an error message to stderr and exits with code 98
