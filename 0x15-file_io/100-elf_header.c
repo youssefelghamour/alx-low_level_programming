@@ -5,6 +5,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <elf.h>
+#include <sys/mman.h>
 
 /**
 * print_error - Prints an error message to stderr and exits with code 98
