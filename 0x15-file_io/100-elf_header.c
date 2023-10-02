@@ -1,5 +1,7 @@
 #include "main.h"
 #include <elf.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 /**
 * print_error - Prints an error message to stderr and exits with code 98
@@ -54,8 +56,8 @@ void print_version(Elf64_Ehdr *header)
 */
 void print_data(Elf64_Ehdr *header)
 {
-	printf("	Data:	%s\n", (header->e_ident[EI_DATA] == ELFDATA2LSB) ? "2's
-			complement, little endian" : "2's complement, big endian");
+	printf("	Data:	%s\n", (header->e_ident[EI_DATA] == ELFDATA2LSB) ?
+			"2's complement, little endian" : "2's complement, big endian");
 }
 
 /**
