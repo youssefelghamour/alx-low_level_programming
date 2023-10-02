@@ -11,7 +11,9 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, len = 0, wrt;
+	int fd;
+	int nletters;
+	int rwr;
 
 	if (!filename)
 		return (-1);
@@ -24,12 +26,12 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 		text_content = "";
 
-	for (len = 0; text_content[len]; len++)
+	for (nletters = 0; text_content[nletters]; nletters++)
 		;
 
-	wrt = write(STDOUT_FILENO, text_content, len);
+	rwr = write(fd, text_content, nletters);
 
-	if (wrt == -1)
+	if (rwr == -1)
 		return (-1);
 
 	close(fd);
