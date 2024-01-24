@@ -1,6 +1,6 @@
 # ALX Low-Level Programming
 
-This repository contains various projects completed during the ALX Software Engineering program, focusing on low-level programming concepts concepts in the C programming language. Each directory represents a separate project covering a range of topics such as basic C programming, pointers, debugging, memory allocation, data structures, and more.
+This repository contains various projects completed during the ALX Software Engineering program, focusing on low-level programming concepts in the C programming language. Each directory represents a separate project covering a range of topics such as basic C programming, pointers, debugging, memory allocation, data structures, and more.
 
 ## Project Directories:
 
