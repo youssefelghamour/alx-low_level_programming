@@ -8,7 +8,7 @@
  */
 void print_array(int *array, size_t size)
 {
-	int i = 0;
+	size_t i = 0;
 
 	printf("Searching in array: ");
 
@@ -37,12 +37,12 @@ void print_array(int *array, size_t size)
  */
 int binary_search(int *array, size_t size, int value)
 {
+	size_t mid = (size - 1) / 2;
+
 	if (!array || size == 0)
 		return (-1);
 
 	print_array(array, size);
-
-	size_t mid = (size - 1) / 2;
 
 	if (array[mid] == value)
 		return (mid);
