@@ -37,27 +37,27 @@ void print_array(int *array, size_t size)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t mid = (size - 1) / 2;
+	size_t l, r, mid;
+
+	l = 0;
+	r = size - 1;
 
 	if (!array || size == 0)
 		return (-1);
 
-	print_array(array, size);
-
-	if (array[mid] == value)
-		return (mid);
-
-	if (array[mid] < value)
+	while (l <= r)
 	{
-		/**
-		 * mid + 1 is added to account for the elements
-		 * discarded in the left subarray
-		 */
-		return (binary_search(array + (mid + 1), size - (mid + 1), value) + mid + 1);
-	}
+		print_array(array + l, r - l + 1);
 
-	if (array[mid] > value)
-		return (binary_search(array, mid, value));
+		mid = (l + r) / 2;
+
+		if (value == array[mid])
+			return (mid);
+		else if (value < array[mid])
+			r = mid - 1;
+		else
+			l = mid + 1;
+	}
 
 	return (-1);
 }
